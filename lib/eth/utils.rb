@@ -52,7 +52,7 @@ module Eth
     end
 
     def prefix_message(message)
-      "\x19Ethereum Signed Message:\n#{message.length}#{message}"
+      "\x19Ethereum Signed Message:\n#{message.bytesize}#{message}"
     end
 
     def public_key_to_address(hex)
